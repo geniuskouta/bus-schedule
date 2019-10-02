@@ -1,0 +1,176 @@
+.body{
+    text-align: center;
+    margin: 3% 15%;
+    padding: 0 5%;
+    border: 1px solid;
+    background-image: url("../images/akita-mid.jpg");
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+}
+
+#route{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    text-align: left;
+    font-size: 1.0rem;
+    margin: 0 15%;
+}
+
+.top{
+    float: center;
+    width: 100%;
+    margin-top: 50px;
+}
+.bottom{
+    float: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+#button{
+    font-size: 2.0rem;
+    font-family: 'Nixie One', cursive;
+    animation: animate 0.5s linear infinite;
+    color: whitesmoke;
+    margin-top: 50px;
+}
+
+.paypal{
+    color: black;
+}
+
+.more-schedule p{
+    text-align: center;
+    font-size: 1.0rem;
+}
+
+
+@keyframes animate {
+	
+	0%,
+	100% {
+		text-shadow: -1.0px -1.0px 0 #00ffff,
+								 1.0px 1.0px 0 pink;
+	}
+	
+	25% {
+		text-shadow: 1.0px 1.0px 0 #00ffff,
+								 -1.0px -1.0px 0 pink;
+	}
+	
+	50% {
+		text-shadow: 1.0px -1.0px 0 #00ffff,
+								 -1.0px 1.0px 0 pink;
+	}
+	
+	75% {
+		text-shadow: -1.0px 1.0px 0 #00ffff,
+								 1.0px -1.0px 0 pink;
+	}
+	
+}
+
+.time-area, .schedule{
+    float: left;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#clock, #closest-schedule {
+    font-size: 3.0rem;
+    font-family: 'Nixie One', cursive;
+    text-align: center;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 880px) {
+    #route{
+        margin: 0 2%;
+    }
+    .body {
+      margin: 10px 10px;
+      background-position-x: 40%;
+      height: auto;
+    }
+    .top{
+        margin-top: 50px;
+    }
+
+
+    .bottom{
+      margin-bottom: 50px;
+    }
+    #clock, #closest-schedule {
+        font-size: 2.7rem;
+    }
+}
+
+@media screen and (max-width: 660px){
+    body{
+        background-image:none;
+        margin: 0;
+    }
+    .body{
+        margin: 10% 0;
+        background-image: url("../images/akita_inu.png");
+        background-position-x: center;
+        background-position-y: 40%;
+        border-style: solid;
+        border-width: 0.5px 0 0.5px 0;
+    }
+    #clock, #closest-schedule {
+        font-size: 2.5rem;
+    }
+    p.time-title{
+        font-size: 1.0rem;
+    }
+    .more-schedule p{
+        font-size: 1.2rem;
+    }
+
+    .time-area, .schedule{
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    #button{
+        font-size: 1.7rem;
+        font-family: 'Nixie One', cursive;
+        animation: none;
+        font-weight: bold;
+        text-shadow: aqua 1px;
+    }
+
+}
+
+@media screen and (max-width: 325px){
+    .time-area{
+        width: 100%;
+        float: center;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    .schedule{
+        width: 100%;
+        float: center;
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    #button{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (min-width: 1800px){
+    body{
+        margin: 0 20%;
+    }
+}
+
+

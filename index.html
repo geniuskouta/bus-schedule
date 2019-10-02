@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AIU Bus Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property=":og:title" content="AIU Bus Schedule" />
+  <meta property=":og:type" content="website" />
+  <meta property="og:image" content="https://drive.google.com/uc?export=view&id=1--j4mSIbjQSaRo1UdA5RGDKKn-jB89O7">
+  <meta name="description" content="Quick Bus Time App for AIU students">
+  <meta name="keywords" content="AIU,akita,bus,aeon,yotsugoya">
+  <link rel="icon" type="image/png" href="./images/shiba.ico">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nixie+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/menu.css">
+  <script src="./js/timer.js"></script>
+  <script src="./js/schedule.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="destination-choices">
+        <div class="choice-drawer">
+          <ul>
+          <li style="margin-bottom: 40px; font-size: 25px;text-align: center;">OK. From Aeon to where?</li>
+          <li><a class="des-choice" onclick="getDestination(this);">Campus</a></li>
+          <li><a class="des-choice" onclick="getDestination(this);">Yotsugoya</a></li>
+          </ul>
+        </div>
+      </div>
+    <div class="container">
+        <a class="toggle-menu">
+          <i></i>
+          <i></i>
+          <i></i>
+        </a>
+        <div class="menu-drawer">
+          <ul>
+            <li style="margin-bottom: 40px; font-size: 25px;text-align: center;">From where are you leaving?</li>
+            <li><a class="choice" id="selectDestination" onclick="getDeparture(this);">Aeon</a></li>
+            <li><a class="choice" onclick="getDeparture(this);">Yotsugoya</a></li>
+            <li><a class="choice" onclick="getDeparture(this);">Campus</a></li>
+          </ul>
+        </div>
+      </div>
+</header>
+<p id="route">route</p>
+<div class="body">
+<div class="top">
+  <span class='time-area'>
+    <p class="time-title">Local Time</p>
+    <p id="clock"></p>
+  </span>
+  <span class="schedule">
+    <p class="time-title">Next Bus Departs At</p>
+    <p id="closest-schedule"></p>
+  </span>
+</div>
+<div class="bottom">
+    <a id="button" onclick="moreScheduleButton(this);">See more schedule</a>
+</div>
+</div>
+<div class="more-schedule">
+    <p>Buy me <a href="https://www.paypal.com/paypalme2/geniuskouta" target="_blank" class="paypal">a cup of coffee!</a></p>
+    <ul class="schedule-list">   
+    </ul>
+</div>
+</body>
+<script type="text/javascript">
+  window.onload =  function(){
+    startTime();
+    selectBus(departure, destination);
+  };
+</script>
+<script src="./js/menu.js">
+</script>
+</html>
